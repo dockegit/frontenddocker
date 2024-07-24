@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paz y salvo</title>
+    <link rel="icon" href="/img/sena.png">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../css/paz.css">
+
+</head>
+<body>
+    <%- include('../partials/view.nav.head.ejs')  %>
+
+    <main class="container">
+
+        <div class="opc__header">
+            <h1>Tareas Completadas</h1>
+            <div class="search">
+                <input type="search" id="buscador" class="buscador" placeholder="Buscar">
+            </div>
+        </div>
+        <!-- contenido donde se muestre la tabla o el contenido -->
+        <div class="contenedor__Lista">
+            <ul class="listas" id="data">
+                  
+            </ul>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+ integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     <script src="../../js/notascompletas.js"></script>
+</body>
+</html>

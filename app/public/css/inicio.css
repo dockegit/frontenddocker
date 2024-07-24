@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+:root{
+    --verde:#27ab25bb;
+    --btn:#11800fa2;
+    --fondo:rgba(0, 0, 0, 0.521);
+    --contenido:rgba(128, 128, 128, 0.116);
+}
+ body{
+    background: url(/img/fon.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+} 
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.377);
+}
+/* nav */
+.nav{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    line-height: 50px;
+    background-color:rgba(128, 128, 128, 0.116); 
+    z-index: 100;
+}
+
+/* nav logo */
+.nav-logo p{
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 0 3rem;
+}
+
+
+/* nav menu */
+.nav-menu .no{
+  display: none;
+}
+.nav-menu ul{
+    display: flex;
+}
+
+.nav-menu ul li{
+    list-style: none;
+}
+.nav-menu ul li .link{
+    text-decoration: none;
+    color: #ffffff;
+    padding-bottom: 10px ;
+    margin: 0 30px;
+    font-weight: 600;
+}
+ .nav-menu ul li .link:hover{
+    border-bottom: 2px solid rgb(255, 255, 255) ;
+} 
+
+/* nav botones */
+.nav-button a{
+    padding: 10px 50px;
+    border: none;
+    outline: none;
+    background-color: var(--btn);
+    margin-left: 15px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+ 
+.nav-button .btn:hover{
+    background: rgba(255, 255 , 255, 0.3);
+} 
+
+
+/* nav 3 lineas */
+.nav-menu-btn{
+    display: none;
+}
+/* CONTENIDO PRINCIPAL del main */
+
+.section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px 50px 0;
+}
+
+.section .section__content{
+    max-width: 600px;
+    color: white;
+}
+.section .section__content h1{
+
+    font-weight: 500;
+    margin: 0 0 15px 0;
+}
+.section .section__content p{
+    font-weight: 500;
+    margin: 10px 0 40px;
+}
+
+.section .section__content .section__btn{
+    text-decoration: none;
+    color: white;
+    background-color: var(--btn);
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.section .section__content .section__btn:hover{
+    padding:10px 28px;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.096);
+}
+
+/* FORMULARIO */
+.section .form{
+    position: relative;
+    width: 440px;
+}
+
+
+.form h2{
+    color: white;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.form .form__box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+}
+.form__box .input__form{
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 100%;
+    padding: 0 10px 0 45px;
+    margin-top: 10px;
+    border-radius: 15px;
+    transition: .2s ease;
+}
+::placeholder{
+    color: white;
+}
+.input__form:hover, .input__fo:focus{
+    background: rgba(255, 255, 255, 0.349);
+    box-shadow: 0 0 20px rgb(82, 82, 82);
+}
+
+.form__boton{
+    position: relative;
+    width: 100%;
+    align-items: center;
+}
+
+
+.btn{
+    background-color: var(--btn);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: .3s ease-in-out;
+}
+
+.btn:hover{
+    background-color: rgba(255, 255, 255, 0.363);
+}
+
+
+.form__texto{
+    color: white;
+
+}
+.link{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+
+}
+.link:hover{
+    text-decoration: underline;
+    color: red;
+}
+
+.form__cuenta{
+    margin-top: 10px;
+    color: white;
+}
+.form__cuenta p .links{
+    text-decoration: none;
+    color: white;
+}
+.form__cuenta p .links:hover{
+    text-decoration: underline;
+    color: red;
+}
+
+
+  
+
+
+/* MEDIA QUERIS */
+
+
+@media screen and (max-width:768px) {
+      .nav{
+        display: flex;
+        justify-content: space-between;
+      }
+      
+      
+        /* aca es para que aparezca el bton de menu */
+      .nav-menu-btn {
+        display: block; 
+        color: rgb(255, 255, 255);
+        font-size: 30px;
+        cursor: pointer;
+        border-radius: 100px; 
+        padding: 10px; 
+      }
+      
+      .nav-menu-btn:hover {
+        background-color: rgba(0, 0, 0, 0.3); 
+      }
+      .nav-menu ul li .link{
+        margin: 0px 20px;
+      }
+     
+      .nav-menu {
+        height: 0;
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        right: 0;
+        width: 100%;
+      
+        background-color:rgb(128, 128, 128);
+        transition: 0.5s ease-in-out;
+      }
+      
+      .nav-menu.active {
+        /* height: calc(100vh - 100px); */
+        height: 200px;
+      }
+      /* aca */
+      .nav-menu ul {
+        display: block;
+        width: 100%; 
+        margin: 0; 
+        padding: 10px 0; 
+        text-align: center;
+
+        opacity: 0;
+      }
+      
+      .nav-menu.active ul {
+        opacity: 1;
+      }
+
+       
+
+
+      /* contenido despues de la barra de navegacion responsive */
+     .section{
+        flex-direction: column;
+     }
+
+     .section .section__content h1{
+        text-align: center;
+        margin-top: 15px;
+     }
+
+     .section .section__content{
+        max-width: 400px;
+     }
+     .section .section__content p{
+        margin: 10px 0 20px;
+     }
+    
+     /* formulario */
+
+     .section .form{
+        position: relative;
+        width: 300px;
+        margin-bottom: 40px;
+    }
+
+    
+    .form__cuenta{
+        float: right;
+    }
+
+      
+    
+}
+
+
+

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dash</title>
+  <link rel="icon" href="/img/sena.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+   integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"rel="stylesheet"/>
+  <link rel="stylesheet" href="../../css/dash.css">
+</head>
+<body>
+<%- include('partials/view.nav.head.ejs')  %> 
+<!-- , {tokenprivate : tokenprivate} -->
+
+  <div class="cantidad">
+    <div class="row">
+      <div class="col-4">
+        <div class="card tarjeta">
+          <div class="card-body" id="data">
+             <!-- <h5 class="card-title">Computadores</h5>
+            <p class="card-text">150</p>  -->
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="card tarjeta">
+          <div class="card-body" id="accesorio">
+            <!-- <h5 class="card-title">Accesorios</h5>
+            <p class="card-text">200</p> -->
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="col-4">
+        <div class="card tarjeta">
+          <div class="card-body" id="reserva">
+            <!-- <h5 class="card-title">reserva</h5>
+            <p class="card-text">200</p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+  <!-----------------------------  ---------------------------->
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="../js/dash.js"></script>
+<!-- <script>
+  const portatilplus = sessionStorage.getItem("portatilplus") + "/admin/estadisticacomputador";
+
+fetch(portatilplus)
+.then(res=> res.json())
+.then(data => {
+    if(data.error){
+        console.error("Error al mostrar los datos", data);
+    }else{
+        mostrarEstadisticas(data.body[0]);
+    }
+})
+.catch(error => console.log("error al mostrar los datos", error))
+
+
+// mostrar estadísticas computador
+
+const mostrarEstadisticas = (data) => {
+    // const cantidadTotal = data.cantidadTotal || 1;
+    // const disponibles = data.disponibles || 0;
+    // const reservados = data.reservados || 0;
+    let body = '';
+    for(let i = 0; i < data.length; i++){
+        body += `
+            <h3 class="card-title">Computadores</h3>
+            <hr>
+            <p class="card-text">Disponibles: ${data[i].cantidad}</p>
+        `;
+    }
+    document.getElementById('data').innerHTML = body;
+    
+}
+
+// accesorio
+const portatilplus2 = sessionStorage.getItem("portatilplus") + "/admin/estadisticaaccesorio";
+
+fetch(portatilplus2)
+.then(res=> res.json())
+.then(data => {
+    if(data.error){
+        console.error("Error al mostrar los datos", data);
+    }else{
+        mostraraccesorio(data.body[0]);
+    }
+})
+.catch(error => console.log("error al mostrar los datos", error))
+
+const mostraraccesorio = (data) =>{
+  let body = '';
+    for(let i = 0; i < data.length; i++){
+        body += `
+            <h3 class="card-title">Accesorios</h3>
+            <hr>
+            <p class="card-text">Disponibles: ${data[i].cantidad}</p>
+        `;
+    }
+    document.getElementById('accesorio').innerHTML = body;
+}
+
+// reserva
+const portatilplus3 = sessionStorage.getItem("portatilplus") + "/admin/estadisticaaccesorio";
+
+fetch(portatilplus2)
+.then(res=> res.json())
+.then(data => {
+    if(data.error){
+        console.error("Error al mostrar los datos", data);
+    }else{
+        mostrarreserva(data.body[0]);
+    }
+})
+.catch(error => console.log("error al mostrar los datos", error))
+
+const mostrarreserva = (data) =>{
+  let body = '';
+    for(let i = 0; i < data.length; i++){
+        body += `
+            <h3 class="card-title">Reservas</h3>
+            <hr>
+            <p class="card-text">Activas : ${data[i].cantidad}</p>
+        `;
+    }
+    document.getElementById('reserva').innerHTML = body;
+}
+
+</script> -->
+</body>
+</html>
