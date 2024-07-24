@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sancion</title>
+  <link rel="icon" href="/img/sena.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+   integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"rel="stylesheet"/>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<%- include('partials/view.nav.head.ejs')  %>
+
+    <div class="opc">
+      <div class="opc">
+
+      
+      <h2>Lista de Sanciones</h2>
+    <div class="opciones">
+      <div class="opc__btn">
+        <i class='bx bx-plus btncrear' id="btnnuevo"></i>
+        <!-- <button class="btn btn-success" id="btnnuevo">Nuevo</button> -->
+      </div>
+      <div class="buscar">
+        <input type="search" id="buscador" class="nav__link--buscar" placeholder="buscar"/>
+      </div>
+    </div>
+  </div>
+
+    <table class="table">
+      <thead>
+          <tr>
+              <th>#</th>
+              <th>Nombre Usuario</th>
+              <th>Motivo</th>
+              <th>Opciones</th>
+          </tr>
+      </thead>
+      <tbody id="data"> 
+
+      </tbody>
+  </table>
+  </div>
+  </main>
+  <div>
+    <!-- agregar modal -->
+    <div class="modal fade" id="modalsancion" data-bs-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Agregar Sanción</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                  <form action="">
+                    <div class="form-group">
+                         <span>Registro :</span>
+                        <input type="number" id="idregistro" class="form" placeholder="Numero Usuario">
+                    </div>
+                    <div class="form-group">
+                        <span>Motivo :</span>
+                        <textarea class="form"  id="motivo" rows="3"></textarea>
+
+                        <!-- <input type="text" id="motivo" class="form" placeholder="Motivo"> -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                    <button class="btn btn-success">Agregar</button>
+                    <input type="hidden" id="url" value="<%= url %>">
+
+                </div>
+              </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx-populate@1.20.0/dist/xlsx-populate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="../js/sanciones.js"></script>
+</body>
+</html>

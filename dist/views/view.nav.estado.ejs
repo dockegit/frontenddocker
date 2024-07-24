@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estado</title>
+    <link rel="icon" href="/img/sena.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/style.css" />
+  </head>
+  <body>
+    <%- include('partials/view.nav.head.ejs') %>
+
+    <main class="container">
+      <div>
+        <h1>Lista de Accesorios</h1>
+        <div class="opciones">
+          <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#mi-modal">Nuevo</button>
+          <div class="buscar">
+            <input type="search" class="nav__link--buscar" placeholder="buscar"/>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="contenedor__list">
+        <ul class="contenedor__list">
+            <li>
+                <div class="tarjeta">
+                    
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+    <div>
+      <!-- agregar modal -->
+      <div class="modal fade" id="mi-modal" data-bs-backdrop="static">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Agregar Accesorios</h5>
+              <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <!-- <label for="">Accesorios</label> -->
+                <span>Nombre de Accesorio :</span>
+                <input
+                  type="text"
+                  class="form"
+                  placeholder="Nombre Accesorios"
+                />
+              </div>
+              <div class="form-group">
+                <!-- <label for="">Accesorios</label> -->
+                <span>Numero de Accesorio :</span>
+                <input
+                  type="text"
+                  class="form"
+                  placeholder="Nombre Accesorios"
+                />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-danger" data-bs-dismiss="modal">
+                Cancelar
+              </button>
+              <button class="btn btn-success">Agregar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

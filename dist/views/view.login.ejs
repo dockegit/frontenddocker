@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incio</title>
+    <link rel="icon" href="./img/sena.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="./css/inicio.css">
+    
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-logo">
+
+                <p id="logo">Portatil Plus</p>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="bx bx-menu"></i>
+               
+            </div>
+        </nav>
+        <section class="section">
+            <div class="section__content">
+                <h1>Reserva tu Computador!</h1>
+                <p>Nuestro sistema se centra en facilitar a los usuarios el acceso temporal a computadoras mediante reservas
+                    rápidas y sencillas, mejorando así su productividad y optimizando el uso de recursos informáticos</p>
+            </div>
+
+            <div class="form">
+                <h2>Inicio Sesión</h2>
+                <form action="">
+                    <div>
+                        <div class="form__box">
+                            <input type="email" id="correo" class="input__form" placeholder="Correo">
+                        </div>
+                        <div class="form__box">
+                            <input type="password" id="contrasena" class="input__form" placeholder="Contraseña">
+                        </div>
+                    </div>
+                </form>
+
+                    <div class="form__boton">
+                        <button type="submit" class="btn" onclick="logueo();">Iniciar Sesión</button>
+                    </div>   
+                    <input type="hidden" id="url" value="<%= url %>">
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/login.js"></script>
+</body>
+</html>

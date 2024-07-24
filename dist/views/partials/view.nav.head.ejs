@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estado</title>
+  <link rel="icon" href="/img/sena.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+   integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"rel="stylesheet"/>
+  <link rel="stylesheet" href="../../css/navegacion.css">
+
+
+</head>
+<header>
+  <nav class="nav">
+    <ul class="list">
+      <li class="list__item list__item--click">
+        <div class="list__button">
+          <i class="bx bx-home-alt-2"></i>
+          <a href="/dash" class="nav__link">Inicio</a>
+        </div>
+      </li>
+      <li class="list__item list__item--click">
+        <div class="list__button list__button--click">
+          <i class="bx bx-folder"></i>
+          <a href="#" class="nav__link">reserva</a>
+        </div>
+        <ul class="list__show">
+          <li class="list__inside">
+            <a href="/dash/salvo" class="nav__link nav__link--inside">Paz y Salvo</a>
+          </li>
+          <li class="list__inside">
+            <a href="/dash/historial" class="nav__link nav__link--inside">historial</a>
+          </li> 
+        </ul>
+      </li>
+      <li class="list__item list__item--click">
+        <div class="list__button list__button--click">
+          <i class="bx bx-user-pin"></i>
+          <a href="#" class="nav__link">Tareas</a>
+        </div>
+        <ul class="list__show">
+          <li class="list__inside">
+            <a href="/dash/completas" class="nav__link nav__link--inside">Completadas</a>
+          </li>
+         
+          <li class="list__inside">
+            <a href="/dash/sanciones" class="nav__link nav__link--inside">Sanciones</a>
+          </li>
+        </ul>
+      </li>
+      <li class="list__item list__item--click">
+        <div class="list__button list__button--click">
+          <i class="bx bx-clipboard"></i>
+          <a href="#" class="nav__link">Inventario</a>
+        </div>
+        <ul class="list__show">
+          <li class="list__inside">
+            <a href="/dash/computador" class="nav__link nav__link--inside">Computadores</a>
+          </li>
+          <li class="list__inside">
+            <a href="/dash/accesorio" class="nav__link nav__link--inside">Accesorios</a>
+          </li>
+          <li class="list__inside">
+            <a href="/dash/notas" class="nav__link nav__link--inside">Notas</a>
+          </li>
+        </ul>
+      </li>
+      <li class="list__item list__item--click ">
+        <div class="list__button">
+          <i class="bx bx-log-out"></i>
+          <button class="btn cerrar nav__link" onclick="cerrarsesion();">Cerrar Sesión</button>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<div class="top-nav">
+  <div class="top-nav__content">
+    <div class="top-nav__left">
+      <h1>Administrador</h1>
+    </div>
+    <div class="derecha">
+      <div class="caja" id="caja">
+        <a href="/dash/ajustes" class="btnajustes" id="btnconfi">Perfil</a>
+      </div>
+      <div class="top-nav__right">
+        <i class='bx bx-user'  id="btnajuste" onclick="mostrarajustes();"></i>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+<main class="container">
+
+
+
+<!-- <script src="../../js/ajustes.js"></script> -->
+<script>
+  const cerrarsesion = () => {
+    sessionStorage.setItem("token", "");
+    window.location.href = "/";
+  };
+
+
+  const token = sessionStorage.getItem("token");
+  if (token == "" || token == null) {
+    window.location.href = "/";
+  }
+
+  function mostrarajustes() {
+    var caja = document.getElementById('caja');
+    if (caja.style.display === 'none' || caja.style.display === '') {
+      caja.style.display = 'flex';
+    } else {
+      caja.style.display = 'none';
+    }
+  }
+</script>

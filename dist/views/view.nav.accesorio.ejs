@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accesorio</title>
+  <link rel="icon" href="/img/sena.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+   integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"rel="stylesheet"/>
+  <link rel="stylesheet" href="../../css/style.css">
+
+</head>
+<body>
+<%- include('partials/view.nav.head.ejs')  %>
+    <div class="opc">
+          <div class="opc">
+            <h2>Lista de Accesorios</h2>
+          <div class="opciones">
+            <i class='bx bx-plus btncrear' id="btncrear"></i>
+            <!-- <button class="btn btn-success" id="btncrear">Nuevo</button> -->
+            <div class="buscar">
+              <input type="search" id="buscador" class="nav__link--buscar" placeholder="buscar"/>
+            </div>
+          </div>
+          </div>
+    </div>
+            
+
+    <table class="table">
+      <thead>
+          <tr>
+              <th>#</th>
+              <th>Numero_Accesorio</th>
+              <th>Nombre_Accesorio</th>
+              <th>Estado</th>
+              <th>Opciones</th>
+          </tr>
+      </thead>
+      <tbody id="data">
+        
+
+      </tbody>
+  </table>
+
+  </div>
+  </main>
+  <div>
+    <!-- agregar modal -->
+    <div class="modal fade" id="modalaccesorio" data-bs-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Agregar Accesorios</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group">
+                            <!-- <label for="">Accesorios</label> -->
+                            <span>Numero de Accesorio :</span>
+                            <input type="number" id="numeroaccesorio" class="form"  placeholder="Numero Accesorios" >
+                        </div>
+                    <div class="form-group">
+                        <!-- <label for="">Accesorios</label> -->
+                         <span>Nombre de Accesorio :</span>
+                        <input type="text" id="nombreaccesorio" class="form" placeholder="Nombre Accesorios">
+                    </div>
+                    <div class="form-group">
+                        <!-- <label for="">Accesorios</label> -->
+                         <span>Estado :</span>
+                         <select name="estado" id="estado" class="form">
+                            <option value="Disponible" class="form" id="estado" selected>Disponible</option> 
+                          </select>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-success">Agregar</button>
+
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+
+</main>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+ integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="../js/accesorios.js"></script>
+</body>
+</html>

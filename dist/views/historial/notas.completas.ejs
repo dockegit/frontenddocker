@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Completas</title>
+    <link rel="icon" href="/img/sena.png">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"rel="stylesheet"/>
+  <link rel="stylesheet" href="../../css/paz.css">
+
+</head>
+<body>
+    <%- include('../partials/view.nav.head.ejs')  %>
+    <main class="container">
+      <div class="opc__header">
+        <h1>Notas Completas</h1>
+        <div class="search">
+            <input type="search" id="buscador" class="buscador" placeholder="Buscar">
+        </div>
+    </div>
+    <!-- contenido donde se muestre la tabla o el contenido -->
+    <div class="contenedor__Lista">
+        <ul class="listas" id="data">
+          <li>
+            <div class="cartas">
+                <div class="img__container">
+                    <p class="id">id</p>
+                    <a href="#" class="icon-pdf" onclick="reporte(event);"><i class='bx bxs-file-pdf'></i></a>
+                </div>
+                <div class="info">
+                    <h1 class="tarea">tarea</h1>
+                    <p class="notas">nota</p>
+                    <p class="prioridad">prioridad</p>
+                    <p class="estado">estado</p>
+                </div>
+                <div class="btn-container">
+                <div>
+                    <button class="btn btn-success btn-sm">Editar</button>
+                    <i class='bx bx-show'></i>
+                </div>
+                    <i class='bx bx-trash btnborrar'></i>
+                </div>       
+            </div>
+          </li>        
+        </ul>
+    </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/hisreserva.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajustes</title>
+    <link rel="icon" href="/img/sena.png">
+    <link rel="stylesheet" href="../css/asjustes.css">
+</head>
+<body>
+    <%- include('partials/view.nav.head.ejs') %>
+
+    <div class="containe">
+        <div class="ajustes__titulo">
+            <h1>Perfil</h1>
+            <i class='bx bx-exit exit' id="volver"></i>
+        </div>
+        <div class="jusn">
+            <div class="formm mb-2">
+        
+                <label for="exampleFormControlInput1" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+             </div>
+             <div class="formm mb-2">
+                <label for="exampleFormControlInput1" class="form-label">Apellido:</label>
+                <input type="text" class="form-control" id="apellido" placeholder="Apellido">
+             </div>
+        </div>
+         
+         <div class="form mb-2">
+            <label for="exampleFormControlInput1" class="form-label">Telefono:</label>
+            <input type="text" class="form-control" id="telefono" placeholder="Telefono">
+         </div>
+         <div class="form mb-2">
+            <label for="exampleFormControlInput1" class="form-label">Correo:</label>
+            <input type="text" class="form-control" id="correo" placeholder="Correo">
+         </div>
+         <div class="form mb-2">
+            <label for="exampleFormControlInput1" class="form-label">Rol:</label>
+            <input type="text" class="form-control" id="rol" placeholder="Rol" disabled>
+         </div>
+         <div class="form mb-2">
+            <label for="exampleFormControlInput1" class="form-label">Estado:</label>
+            <input type="text" class="form-control" id="estado" placeholder="Estado" disabled>
+         </div>
+         <div class="formmm mb-2">
+            <button type="button" class="btn btn-success" onclick="editar();">Actualizar Perfil</button>
+         </div>
+    </div>
+   </main>  
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+   <script src="../js/ajustes.js"></script>
+</body>
+</html>
