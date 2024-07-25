@@ -55,8 +55,6 @@ const historial = (req, res)=>{
     res.render("view.nav.historial.ejs", options)
 
 }
-
-
 // historial
 const historialreservas = (req, res) =>{
     const url = process.env.BACK_URL;

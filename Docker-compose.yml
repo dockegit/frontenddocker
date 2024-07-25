@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  backcoker:
+    build:
+      context: ./backcoker
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - DB_HOST=db4free.net
+      - DB_USER=sistema_elite
+      - DB_PASSWORD=sistema123
+      - DB_NAME=sistema_elite
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: sistema123
+      MYSQL_DATABASE: sistema_elite
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+  frontenddoker:
+    build:
+      context: ./frontenddoker
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - backcoker
+
+volumes:
+  mysql-data:
