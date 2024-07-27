@@ -1,6 +1,11 @@
-import app from "./app.js";
+import express from 'express';
+import dotenv from 'dotenv';
 
+dotenv.config();
 
-app.listen(app.get("port"), ()=>{
-    console.log(`http://localhost:${app.get("port")}`);
-})
+const app = express();
+app.set('port', process.env.PORT || 3000);
+
+// Aquí configuras tu aplicación Express
+
+export default app;
