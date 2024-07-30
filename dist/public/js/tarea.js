@@ -1,5 +1,3 @@
-"use strict";
-
 document.getElementById('tareas').value = localStorage.getItem('envtarea');
 document.getElementById('notas').value = localStorage.getItem('envnotas');
 document.getElementById('prioridad').value = localStorage.getItem('envprioridad');

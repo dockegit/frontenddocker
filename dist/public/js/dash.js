@@ -1,5 +1,3 @@
-"use strict";
-
 var portatilplus = sessionStorage.getItem("portatilplus") + "/admin/estadisticacomputador";
 fetch(portatilplus).then(function (res) {
   return res.json();

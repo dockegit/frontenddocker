@@ -1,5 +1,3 @@
-"use strict";
-
 // url de historial
 var portatilplus = sessionStorage.getItem("portatilplus") + "/admin/historial";
 fetch(portatilplus).then(function (res) {

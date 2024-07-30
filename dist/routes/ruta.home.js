@@ -1,10 +1,6 @@
 import { Router } from "express";
 import { navegacion } from "../controllers/controller.home.js";
-
-const rutahome = Router();
-
-
-
+var rutahome = Router();
 rutahome.get("/", navegacion.inicio);
 rutahome.get("/ajustes", navegacion.ajustes);
 rutahome.get("/salvo", navegacion.pazysalvo);
@@ -25,6 +21,4 @@ rutahome.get("/ingresarnotas", navegacion.ingrenota);
 rutahome.get("/editarnotas", navegacion.editarnota);
 rutahome.get("/completas", navegacion.notascompletas);
 rutahome.get("/vertarea", navegacion.vertarea);
-
-
-export default rutahome
+export default rutahome;

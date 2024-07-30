@@ -1,5 +1,3 @@
-"use strict";
-
 var url = document.getElementById("url").value;
 sessionStorage.setItem("portatilplus", url);
 var portatilplus = sessionStorage.getItem("portatilplus") + "/admin/historialreserva";

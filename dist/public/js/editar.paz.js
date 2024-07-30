@@ -1,5 +1,3 @@
-"use strict";
-
 document.getElementById('nombre').value = localStorage.getItem('editnombre');
 document.getElementById('apellido').value = localStorage.getItem('editapellido');
 document.getElementById('tele').value = localStorage.getItem('edittelefono');

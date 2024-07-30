@@ -1,5 +1,3 @@
-"use strict";
-
 // consumo agregar
 
 var portatilplus = sessionStorage.getItem("portatilplus") + "/admin/salvo/";

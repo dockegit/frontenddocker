@@ -1,5 +1,3 @@
-"use strict";
-
 var portatilplus = sessionStorage.getItem("portatilplus") + "/admin/notas/";
 var btnnuevo = document.getElementById('btnnuevo');
 btnnuevo.addEventListener('click', function () {

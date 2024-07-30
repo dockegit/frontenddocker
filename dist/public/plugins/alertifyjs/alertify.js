@@ -1,7 +1,4 @@
-"use strict";
-
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-var _typeof2 = _interopRequireDefault(require("@babel/runtime/helpers/typeof"));
+import _typeof from "@babel/runtime/helpers/typeof";
 /**
  * alertifyjs 1.14.0 http://alertifyjs.com
  * AlertifyJS is a javascript framework for developing pretty browser dialogs and notifications.
@@ -206,7 +203,7 @@ var _typeof2 = _interopRequireDefault(require("@babel/runtime/helpers/typeof"));
       cpy.lastIndex = src.lastIndex;
       return cpy;
     }
-    if ((0, _typeof2["default"])(src) === 'object') {
+    if (_typeof(src) === 'object') {
       cpy = {};
       // copy dialog pototype over definition.
       for (var prop in src) {
@@ -463,7 +460,7 @@ var _typeof2 = _interopRequireDefault(require("@babel/runtime/helpers/typeof"));
         }
 
         //initialize hooks object.
-        if ((0, _typeof2["default"])(instance.hooks) !== 'object') {
+        if (_typeof(instance.hooks) !== 'object') {
           instance.hooks = {};
         }
 
@@ -956,7 +953,7 @@ var _typeof2 = _interopRequireDefault(require("@babel/runtime/helpers/typeof"));
         var old;
         //set
         result.op = 'set';
-        if ((0, _typeof2["default"])(key) === 'object') {
+        if (_typeof(key) === 'object') {
           //set multiple
           var args = key;
           for (var prop in args) {
@@ -1401,7 +1398,7 @@ var _typeof2 = _interopRequireDefault(require("@babel/runtime/helpers/typeof"));
         var focus = instance.__internal.focus;
         // the focus element.
         var element = focus.element;
-        switch ((0, _typeof2["default"])(focus.element)) {
+        switch (_typeof(focus.element)) {
           // a number means a button index
           case 'number':
             if (instance.__internal.buttons.length > focus.element) {
@@ -3587,7 +3584,7 @@ var _typeof2 = _interopRequireDefault(require("@babel/runtime/helpers/typeof"));
   });
 
   // CommonJS
-  if ((typeof module === "undefined" ? "undefined" : (0, _typeof2["default"])(module)) === 'object' && (0, _typeof2["default"])(module.exports) === 'object') {
+  if ((typeof module === "undefined" ? "undefined" : _typeof(module)) === 'object' && _typeof(module.exports) === 'object') {
     module.exports = alertify;
     // AMD
   } else if (typeof define === 'function' && define.amd) {
@@ -3598,4 +3595,4 @@ var _typeof2 = _interopRequireDefault(require("@babel/runtime/helpers/typeof"));
   } else if (!window.alertify) {
     window.alertify = alertify;
   }
-})(typeof window !== 'undefined' ? window : void 0);
+})(typeof window !== 'undefined' ? window : this);

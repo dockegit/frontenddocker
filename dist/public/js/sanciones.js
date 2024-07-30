@@ -1,5 +1,3 @@
-"use strict";
-
 // url
 
 var portatilplus = sessionStorage.getItem("portatilplus") + "/admin/sancion/";

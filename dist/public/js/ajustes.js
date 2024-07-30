@@ -1,5 +1,3 @@
-"use strict";
-
 var portatilpluss = sessionStorage.getItem("portatilplus") + "/admin/perfil/";
 var id = sessionStorage.getItem("id");
 fetch(portatilpluss + id).then(function (res) {

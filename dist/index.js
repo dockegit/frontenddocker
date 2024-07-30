@@ -1,5 +1,4 @@
-import app from './app.js';
-
-app.listen(app.get('port'), () => {
-  console.log(`http://localhost:${app.get('port')}`);
+import app from "./app.js"
+app.listen(app.get("port"), ()=>{
+    console.log(`se escucha ${app.get(port)}`);
 });

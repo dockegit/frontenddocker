@@ -1,5 +1,3 @@
-"use strict";
-
 var portatilplus = sessionStorage.getItem("portatilplus") + "/admin/notas/";
 document.getElementById('titulo').value = localStorage.getItem('edittitulo');
 document.getElementById('notas').value = localStorage.getItem('editnotas');
